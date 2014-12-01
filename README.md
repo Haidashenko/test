@@ -13,12 +13,9 @@ New field «stellard» was added to default stellard configuration file (All req
 ###Running
 It is recommended to run «stellard for mobile» in standalone mode (command-line argument -a)
 ###How it works
-1. Commands without secret key (currently supported «account_tx»)
-Commands like «account_tx», which does not need secret key as argument, are redirected to address specified in «stellard» configuration field.
-2. Commands with secret key (currently supported «Payment», «TrustSet», «OfferCreate», «OfferCancel») 
-Commands are performed locally (secret key is not sent to «stellard»), all operations, like getting sequence or building path for payment, are redirected to «stellard».
-3. «Submit»
-Sends tx_blob to address specified in «stellard» configuration field. 
+1. Commands like «account_tx», which does not need secret key as argument, are redirected to address specified in «stellard» configuration field.
+2. «Payment», «TrustSet», «OfferCreate», «OfferCancel» commands are performed locally (secret key is not sent to «stellard»), but all operations, like getting sequence or building path for payment, are redirected to «stellard».
+3. «Submit» sends tx_blob to address specified in «stellard» configuration field. 
 
 ###For more information:
 * https://www.stellar.org
